@@ -129,6 +129,28 @@ Result:
 
 ![result](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/result.PNG)
 
+Push image to Dockerhub:
+
+`docker push stheferri/linuxtips-giropops-senhas-distroless:1.0`
+
+![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/docker-push.PNG)
+![dockerhub](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/dockerhub.PNG)
+
 ## Trivy
+
+Trivy is a comprehensive and versatile security scanner. Trivy has scanners that look for security issues, and targets where it can find those issues.
+Reference [aquasecurity/trivy](https://github.com/aquasecurity/trivy)
+
+Trivy will help to verify and check vulnerabilities in the image that we created and using in this process and we can see if using the chainguard images has some effect finally:
+
+Check vulnerabilities in image:
+
+`trivy image stheferri/linuxtips-giropops-senhas-distroless:1.0`
+
+![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/trivys-giropops.PNG)
+
+`trivy image cgr.dev/chainguard/redis`
+
+![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/trivy-redis.PNG)
 
 ## Cosign
