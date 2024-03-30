@@ -108,17 +108,17 @@ But to summarize you just need execute the following steps:
 
 ## Result
 
-- Create the Docker image:
+### Create the Docker image:
 
 `docker image build -t stheferri/linuxtips-giropops-senhas-distroless:1.0 .`
 
 ![image](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/create-image.PNG)
 
-- Current size:
+### Current size:
 
 ![size](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/size-image.PNG)
 
-- Run container:
+### Run container:
 
 `docker run -d -p 5000:5000 --name giropops-senhas-distroless stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
@@ -126,11 +126,11 @@ But to summarize you just need execute the following steps:
 
 ![container2](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/container-ls.PNG)
 
-- Result:
+### Result:
 
 ![result](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/result.PNG)
 
-- Push image to Dockerhub:
+### Push image to Dockerhub:
 
 `docker push stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
@@ -146,7 +146,7 @@ Reference [aquasecurity/trivy](https://github.com/aquasecurity/trivy)
 
 Trivy will help to verify and check vulnerabilities in the image that we created and using in this process and we can see if using the chainguard images has some effect finally:
 
-- Check vulnerabilities in image:
+### Check vulnerabilities in image:
 
 `trivy image stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
