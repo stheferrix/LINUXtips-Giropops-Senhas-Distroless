@@ -108,42 +108,45 @@ But to summarize you just need execute the following steps:
 
 ## Result
 
-Create the Docker image:
+- Create the Docker image:
 
 `docker image build -t stheferri/linuxtips-giropops-senhas-distroless:1.0 .`
 
 ![image](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/create-image.PNG)
 
-Current size:
+- Current size:
 
 ![size](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/size-image.PNG)
 
-Run container:
+- Run container:
 
 `docker run -d -p 5000:5000 --name giropops-senhas-distroless stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
 ![container](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/run-container.PNG)
+
 ![container2](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/container-ls.PNG)
 
-Result:
+- Result:
 
 ![result](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/result.PNG)
 
-Push image to Dockerhub:
+- Push image to Dockerhub:
 
 `docker push stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
 ![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/docker-push.PNG)
+
 ![dockerhub](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/dockerhub.PNG)
 
 ## Trivy
 
 Trivy is a comprehensive and versatile security scanner. Trivy has scanners that look for security issues, and targets where it can find those issues.
+
 Reference [aquasecurity/trivy](https://github.com/aquasecurity/trivy)
 
 Trivy will help to verify and check vulnerabilities in the image that we created and using in this process and we can see if using the chainguard images has some effect finally:
 
-Check vulnerabilities in image:
+- Check vulnerabilities in image:
 
 `trivy image stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
@@ -154,3 +157,23 @@ Check vulnerabilities in image:
 ![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/trivy-redis.PNG)
 
 ## Cosign
+
+Cosign verifies the authenticity of the image to ensure that the image has not been altered or compromised since it was signed.
+
+Reference [cosign](https://docs.sigstore.dev/signing/quickstart/)
+
+After installed generate a key-pair resulting in cosign.key and cosign.pub:
+
+`cosign generate-key-pair`
+
+To sign your image it must first be on dockerhub and then:
+
+`cosign sign -key cosign.key stheferri/linuxtips-giropops-senhas-distroless:1.0`
+
+To verify:
+
+`cosign verify --key cosign.pub stheferri/linuxtips-giropops-senhas-distroless:1.0`
+
+![cosign](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/cosign.PNG)
+
+
