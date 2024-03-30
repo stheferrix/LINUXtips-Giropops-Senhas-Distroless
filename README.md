@@ -97,7 +97,22 @@ ENTRYPOINT ["/usr/bin/python", "-m", "flask", "run", "--host=0.0.0.0"]
 
 ## Redis image
 
+The application needs Redis has been running and following previously statement to run images with few vulnerabilities we will run Redis image by Chainguard too.
+You can find the image and details [here](https://edu.chainguard.dev/chainguard/chainguard-images/reference/redis/).
+
+But to summarize you just need execute the following steps:
+
+1. Pull the image: `docker pull cgr.dev/chainguard/redis:latest`
+1. Run the container: `docker run -d -p 6379:6379 --name redis cgr.dev/chainguard/redis`
+1. If you want, check the ip address is the same that was indicate in the Dockerfile: `docker inspect redis`
+
 ## Result
+
+Finally create the Docker image and run the container:
+
+`docker image build -t stheferri/linuxtips-giropops-senhas-distroless:1.0 .`
+
+`docker run -d -p 5000:5000 --name giropops-senhas-distroless stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
 ## Trivy
 
