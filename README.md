@@ -108,11 +108,26 @@ But to summarize you just need execute the following steps:
 
 ## Result
 
-Finally create the Docker image and run the container:
+Create the Docker image:
 
 `docker image build -t stheferri/linuxtips-giropops-senhas-distroless:1.0 .`
 
+![image](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/create-image.PNG)
+
+Current size:
+
+![size](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/size-image.PNG)
+
+Run container:
+
 `docker run -d -p 5000:5000 --name giropops-senhas-distroless stheferri/linuxtips-giropops-senhas-distroless:1.0`
+
+![container](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/run-container.PNG)
+![container2](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/run-container2.PNG)
+
+Result:
+
+![result](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/result.PNG)
 
 ## Trivy
 
