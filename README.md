@@ -123,7 +123,7 @@ Run container:
 `docker run -d -p 5000:5000 --name giropops-senhas-distroless stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
 ![container](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/run-container.PNG)
-![container2](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/run-container2.PNG)
+![container2](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/container-ls.PNG)
 
 Result:
 
