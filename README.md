@@ -3,7 +3,17 @@
 
 This repository contain the project files to implement an application using a Dockerfile with chainguard for a distroless approach.
 
+[Distroless](##Distroless)
+[Chainguard](##Chainguard)
+[Create Dockerfile](##Create Dockerfile)
+[Redis](##Redis)
+[Result](##Result)
+[Trivy](##Trivy)
+[Cosign](##Cosign)
+
 You can check the first example of this application in this repository [stheferrix/LINUXtips-Giropops-Senhas](https://github.com/stheferrix/LINUXtips-Giropops-Senhas) and can better understand how the application works.
+
+Challenge steps do complete:
 
 1. Create a repository in Github
 1. Create an Docker image to implement the application Giropops-Senhas using Chainguard images.
