@@ -147,7 +147,7 @@ Check vulnerabilities in image:
 
 `trivy image stheferri/linuxtips-giropops-senhas-distroless:1.0`
 
-![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/trivys-giropops.PNG)
+![dockerpush](https://github.com/stheferrix/LINUXtips-Giropops-Senhas-Distroless/blob/main/assets/trivy-giropops.PNG)
 
 `trivy image cgr.dev/chainguard/redis`
 
